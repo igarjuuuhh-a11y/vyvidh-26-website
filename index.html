@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vyvidh '26 | National Level Tech Fest - VAST</title>
+  <meta name="description" content="Vyvidh '26 - National Level Technical Festival organized by Vidya Academy of Science & Technology (VAST), Thrissur.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- FAST SPLIT-SCREEN BLACK INTRO CURTAIN -->
+  <div id="intro-curtain" class="intro-curtain">
+    <div class="curtain-panel curtain-left"></div>
+    <div class="curtain-panel curtain-right"></div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo-link" title="Vyvidh '26 Home">
+        <img src="vyvidh_26_logo.png" alt="Vyvidh '26 Logo" class="top-left-logo" onerror="this.src='Vyvidh `26_logo.PNG'">
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">HOME</a>
+        <a href="#about" class="nav-link">ABOUT US</a>
+        <a href="#main-events" class="nav-link">MAIN EVENTS</a>
+        <a href="#dept-events" class="nav-link">DEPARTMENT EVENTS</a>
+        <a href="#gallery" class="nav-link">GALLERY</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section home-section">
+    <div class="home-content">
+      <div class="hero-logo-group">
+        <!-- TOP: BULB LOGO -->
+        <img src="vyvidh_26_logo.png" alt="Vyvidh '26 Icon" class="hero-vyvidh-logo" onerror="this.src='Vyvidh `26_logo.PNG'">
+        
+        <!-- DIRECTLY BELOW: LOGO.PNG (ENLARGED TO LOOK BIGGER & BETTER) -->
+        <div class="golden-multi-gradient-logo" title="Vyvidh '26"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US SECTION -->
+  <section id="about" class="section about-section">
+    <div class="college-banner-container">
+      <img src="COLLEGE.PNG" alt="Vidya Academy of Science & Technology Campus" class="college-full-img">
+    </div>
+
+    <div class="about-container">
+      <h2 class="main-heading section-heading reveal-up">About Vidya</h2>
+      <div class="about-text-content">
+        <p class="reveal-up">
+          Vidya Academy of Science & Technology (VAST) is a state-of-the-art engineering college conforming to international standards. This model engineering college is approved by AICTE vide approval NO./06/ KER/ENGG/2002/91 dated 12/05/03 and affiliated to APJ Abdul Kalam Technological University.
+        </p>
+        <p class="reveal-up">
+          In few years VAST has evolved and achieved recognition as a notable School of Engineering with its competent and committed faculty, high quality infrastructure and high technology teaching aids, and by providing a serene atmosphere that complements academic life. VAST has a holistic approach to education where academic training goes hand in hand with offerings that develop the body, mind and soul to prepare its graduates to be future leaders.
+        </p>
+      </div>
+
+      <!-- STATS SECTION -->
+      <div class="stats-grid">
+        <div class="stat-card reveal-up">
+          <div class="stat-number" data-target="150">150+</div>
+          <div class="stat-label">SCHOLARSHIPS</div>
+        </div>
+        <div class="stat-card reveal-up">
+          <div class="stat-number" data-target="70">70+</div>
+          <div class="stat-label">RANK HOLDERS</div>
+        </div>
+        <div class="stat-card reveal-up">
+          <div class="stat-number" data-target="400">400+</div>
+          <div class="stat-label">PLACEMENT OFFERS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN EVENTS SECTION -->
+  <section id="main-events" class="section main-events-section">
+    <div class="section-container wide-container">
+      <h2 class="main-heading section-heading reveal-up">MAIN EVENTS</h2>
+
+      <div class="main-events-grid">
+        <!-- Box 1: Avishkar -->
+        <div class="main-event-card reveal-up">
+          <div class="event-logo-box">
+            <img src="MAIN EVENTS/AVISHKAR.png" alt="Avishkar Logo" class="main-event-logo">
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title-small">AVISHKAR</h3>
+            <button class="btn btn-learn-more" onclick="openMainEventModal(0)">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- Box 2: Flex Forum -->
+        <div class="main-event-card reveal-up">
+          <div class="event-logo-box">
+            <img src="MAIN EVENTS/FLEX_FORUM.png" alt="Flex Forum Logo" class="main-event-logo">
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title-small">FLEX FORUM</h3>
+            <button class="btn btn-learn-more" onclick="openMainEventModal(1)">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- Box 3: Ideagram -->
+        <div class="main-event-card reveal-up">
+          <div class="event-logo-box">
+            <img src="MAIN EVENTS/IDEAGRAM.png" alt="Ideagram Logo" class="main-event-logo">
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title-small">IDEAGRAM</h3>
+            <button class="btn btn-learn-more" onclick="openMainEventModal(2)">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- Box 4: Ideathon -->
+        <div class="main-event-card reveal-up">
+          <div class="event-logo-box">
+            <img src="MAIN EVENTS/IDEATHON.png" alt="Ideathon Logo" class="main-event-logo">
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title-small">IDEATHON</h3>
+            <button class="btn btn-learn-more" onclick="openMainEventModal(3)">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- Box 5: Navayuval -->
+        <div class="main-event-card reveal-up">
+          <div class="event-logo-box">
+            <img src="MAIN EVENTS/NAVAYUVA.png" alt="Navayuval Logo" class="main-event-logo">
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title-small">NAVAYUVA</h3>
+            <button class="btn btn-learn-more" onclick="openMainEventModal(4)">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- Box 6: Reel Rush -->
+        <div class="main-event-card reveal-up">
+          <div class="event-logo-box">
+            <img src="MAIN EVENTS/REEL_RUSH.png" alt="Reel Rush Logo" class="main-event-logo">
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title-small">REEL RUSH</h3>
+            <button class="btn btn-learn-more" onclick="openMainEventModal(5)">LEARN MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPARTMENT EVENTS SECTION -->
+  <section id="dept-events" class="section dept-events-section">
+    <div class="section-container">
+      <h2 class="main-heading section-heading reveal-up">DEPARTMENT EVENTS</h2>
+
+      <div class="dept-events-wrapper">
+        <!-- Row 1: 4 Containers (1. EMMERZO (AIML), 2. DHRUVA (CIVIL), 3. DESTROY THE DECIBEL (CSE), 4. LIGAROBOTRIX (ECE)) -->
+        <div class="dept-row top-row">
+          <!-- 1. EMMERZO (AIML) -->
+          <div class="dept-card reveal-up">
+            <div class="dept-logo-box">
+              <img src="DEPARTMENT EVENTS/CARNAGE_AIML.png" alt="Emmerzo Logo" class="dept-logo">
+            </div>
+            <div class="dept-info">
+              <h3 class="dept-event-name">EMMERZO</h3>
+              <p class="dept-name">AI & Machine Learning</p>
+            </div>
+            <div class="dept-hover-overlay">
+              <h4 class="overlay-title">EMMERZO</h4>
+              <p class="overlay-dept">AIML Department</p>
+              <p class="overlay-desc">Day: 26/09/25 | Time: 10:30 AM<br>Venue: MB 006 | Fee: ₹100/-<br>Faculty: Bianka Thomas, Manjusha P D<br>Student: Maria Derby, Mohammed Uwais</p>
+              <span class="hover-badge">Prize Pool: ₹12,000</span>
+            </div>
+          </div>
+
+          <!-- 2. DHRUVA (CIVIL) -->
+          <div class="dept-card reveal-up">
+            <div class="dept-logo-box">
+              <img src="DEPARTMENT EVENTS/VASTATVA '26 (CIVIL).png" alt="Dhruva Logo" class="dept-logo">
+            </div>
+            <div class="dept-info">
+              <h3 class="dept-event-name">DHRUVA</h3>
+              <p class="dept-name">Civil Engineering</p>
+            </div>
+            <div class="dept-hover-overlay">
+              <h4 class="overlay-title">DHRUVA</h4>
+              <p class="overlay-dept">Civil Department</p>
+              <p class="overlay-desc">Day: 26 - 27/09/25 | Time: 10:30 AM - 3:00 PM<br>Venue: North Block Courtyard | Fee: ₹30/-<br>Faculty: Chithira Ajeeth<br>Student: Athira Anandan P</p>
+              <span class="hover-badge">Entry Fee: ₹30/-</span>
+            </div>
+          </div>
+
+          <!-- 3. DESTROY THE DECIBEL (CSE) -->
+          <div class="dept-card reveal-up">
+            <div class="dept-logo-box">
+              <img src="DEPARTMENT EVENTS/DTD (CSE).PNG" alt="Destroy the Decibel Logo" class="dept-logo logo-invert-white">
+            </div>
+            <div class="dept-info">
+              <h3 class="dept-event-name">DESTROY THE DECIBEL</h3>
+              <p class="dept-name">Computer Science & Engineering</p>
+            </div>
+            <div class="dept-hover-overlay">
+              <h4 class="overlay-title">DESTROY THE DECIBEL</h4>
+              <p class="overlay-dept">CSE Department</p>
+              <p class="overlay-desc">Day: 27/09/25 | Time: 9:15 AM onwards<br>Venue: Area in front of Auditorium<br>Faculty: Dr. Sanaj M S, Sreekala R, Jitha P V<br>Student: Afsal Ahmed, Suhail, Shemeem</p>
+              <span class="hover-badge">Entry Fee: ₹700/-</span>
+            </div>
+          </div>
+
+          <!-- 4. LIGAROBOTRIX (ECE) -->
+          <div class="dept-card reveal-up">
+            <div class="dept-logo-box">
+              <img src="DEPARTMENT EVENTS/HAUL_EC.PNG" alt="Ligarobotrix Logo" class="dept-logo logo-invert-white">
+            </div>
+            <div class="dept-info">
+              <h3 class="dept-event-name">LIGAROBOTRIX</h3>
+              <p class="dept-name">Electronics & Communication</p>
+            </div>
+            <div class="dept-hover-overlay">
+              <h4 class="overlay-title">LIGAROBOTRIX</h4>
+              <p class="overlay-dept">ECE Department</p>
+              <p class="overlay-desc">Day: 26/09/25 | Time: 10:00 AM - 4:00 PM<br>Venue: South Block Courtyard<br>Faculty: Jemy Jose Kakkasserry, Honeymol P.K<br>Student: Amal Krishnan T, Ashank Karthik</p>
+              <span class="hover-badge">ECE Robotics Showcase</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: 3 Containers (5. LASER ESCAPE (EEE), 6. KERAUNOS (MCA), 7. AGNICHAKRA (ME)) -->
+        <div class="dept-row bottom-row">
+          <!-- 5. LASER ESCAPE (EEE) -->
+          <div class="dept-card reveal-up">
+            <div class="dept-logo-box">
+              <img src="DEPARTMENT EVENTS/ELECSPIRE (EEE).png" alt="Laser Escape Logo" class="dept-logo">
+            </div>
+            <div class="dept-info">
+              <h3 class="dept-event-name">LASER ESCAPE</h3>
+              <p class="dept-name">Electrical & Electronics Engineering</p>
+            </div>
+            <div class="dept-hover-overlay">
+              <h4 class="overlay-title">LASER ESCAPE</h4>
+              <p class="overlay-dept">EEE Department</p>
+              <p class="overlay-desc">Day: 26 - 27/09/25 | Time: 10:30 AM<br>Venue: MB-0-002 | Fee: ₹50/-<br>Faculty: Ms. Siji K B<br>Student: Jackson Joju P, Nakshathra Anilkumar</p>
+              <span class="hover-badge">Entry Fee: ₹50/-</span>
+            </div>
+          </div>
+
+          <!-- 6. KERAUNOS (MCA) -->
+          <div class="dept-card reveal-up">
+            <div class="dept-logo-box">
+              <img src="DEPARTMENT EVENTS/ADWAYTHA_MCA.PNG" alt="Keraunos Logo" class="dept-logo">
+            </div>
+            <div class="dept-info">
+              <h3 class="dept-event-name">KERAUNOS</h3>
+              <p class="dept-name">Master of Computer Applications</p>
+            </div>
+            <div class="dept-hover-overlay">
+              <h4 class="overlay-title">KERAUNOS</h4>
+              <p class="overlay-dept">MCA Department</p>
+              <p class="overlay-desc">Day: 26 - 27/09/25 | Time: 9:30 AM - 3:30 PM<br>Venue: South Block Front Parking<br>Faculty: Krishnakumar<br>Student: Antony Francis</p>
+              <span class="hover-badge">Included with Talentia</span>
+            </div>
+          </div>
+
+          <!-- 7. AGNICHAKRA (MECH) -->
+          <div class="dept-card reveal-up">
+            <div class="dept-logo-box">
+              <img src="DEPARTMENT EVENTS/AGNI CHAKRA'26 (MECH).png" alt="Agnichakra Logo" class="dept-logo">
+            </div>
+            <div class="dept-info">
+              <h3 class="dept-event-name">AGNICHAKRA</h3>
+              <p class="dept-name">Mechanical Engineering</p>
+            </div>
+            <div class="dept-hover-overlay">
+              <h4 class="overlay-title">AGNICHAKRA</h4>
+              <p class="overlay-dept">Mechanical Department</p>
+              <p class="overlay-desc">Day: 27/09/25 | Time: 9:00 AM - 3:00 PM<br>Venue: Space between Decennial & Main Block<br>Faculty: Sangeeth K K<br>Student: Pranav C S</p>
+              <span class="hover-badge">Entry Fee: ₹40/-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="section gallery-section">
+    <div class="section-container">
+      <h2 class="main-heading section-heading reveal-up">GALLERY</h2>
+
+      <div class="puzzle-gallery-grid">
+        <div class="puzzle-item puzzle-span-wide reveal-up">
+          <img src="gallery/inaugration.png" alt="Inauguration Ceremony" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Inauguration Ceremony</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/princi.png" alt="Principal Address" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Principal Address</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/thirumali.png" alt="Thirumali Performance" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Thirumali Performance</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/navayuva.png" alt="Navayuva Fest" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Navayuva Fest</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/navayuva3.png" alt="Youth Innovation Showcase" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Youth Innovation Showcase</span></div>
+        </div>
+
+        <div class="puzzle-item puzzle-span-wide reveal-up">
+          <img src="gallery/aiml.png" alt="AIML Tech Expo" class="puzzle-img">
+          <div class="puzzle-overlay"><span>AIML Tech Expo</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/aiml1.png" alt="AI & Neural Challenge" class="puzzle-img">
+          <div class="puzzle-overlay"><span>AI & Neural Challenge</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/ce.png" alt="Civil Engineering Fest" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Civil Engineering Fest</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/ce1.png" alt="Vastatva Structural Expo" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Vastatva Structural Expo</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/cse.png" alt="Computer Science Arena" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Computer Science Arena</span></div>
+        </div>
+
+        <div class="puzzle-item puzzle-span-wide reveal-up">
+          <img src="gallery/cse1.png" alt="Dare To Debug Hackathon" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Dare To Debug Hackathon</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/cse2.png" alt="Algorithmic Coding Marathon" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Algorithmic Coding Marathon</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/ece.png" alt="ECE Robotics Arena" class="puzzle-img">
+          <div class="puzzle-overlay"><span>ECE Robotics Arena</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/ece1.png" alt="Haul Electronics Fest" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Haul Electronics Fest</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/ecew.png" alt="Embedded Systems Workshop" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Embedded Systems Workshop</span></div>
+        </div>
+
+        <div class="puzzle-item puzzle-span-wide reveal-up">
+          <img src="gallery/eee.png" alt="Elecspire EEE Showcase" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Elecspire EEE Showcase</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/eee1.png" alt="Smart Energy Prototype" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Smart Energy Prototype</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/mca.png" alt="MCA Adwaytha Fest" class="puzzle-img">
+          <div class="puzzle-overlay"><span>MCA Adwaytha Fest</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/mca1.png" alt="Web & IT Challenge" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Web & IT Challenge</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/me.png" alt="Mechanical Agni Chakra" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Mechanical Agni Chakra</span></div>
+        </div>
+
+        <div class="puzzle-item reveal-up">
+          <img src="gallery/me2.png" alt="Pit-Stop Mechanics Race" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Pit-Stop Mechanics Race</span></div>
+        </div>
+
+        <div class="puzzle-item puzzle-span-wide reveal-up">
+          <img src="gallery/Screenshot 2026-10-04 114239.png" alt="Vyvidh Tech Fest Highlights" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Vyvidh Tech Fest Highlights</span></div>
+        </div>
+
+        <div class="puzzle-item puzzle-span-wide reveal-up">
+          <img src="gallery/Screenshot 2026-10-04 114245.png" alt="Vyvidh Campus Showcase" class="puzzle-img">
+          <div class="puzzle-overlay"><span>Vyvidh Campus Showcase</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER WITH EXACT SOCIAL LINKS -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Contact Column -->
+      <div class="footer-col footer-contact">
+        <h3 class="footer-heading">Contact</h3>
+        <p class="contact-line">
+          <a href="https://maps.google.com/?q=Vidya+Academy+of+Science+and+Technology+Thrissur" target="_blank" rel="noopener" class="footer-contact-link">
+            <i class="fa-solid fa-location-dot"></i> Thalakottukara P.O, Kecheri, Thrissur 680501, Kerala, India
+          </a>
+        </p>
+        <p class="contact-line">
+          <a href="tel:+914885287751" class="footer-contact-link">
+            <i class="fa-solid fa-phone"></i> +91 4885 287751, 287752
+          </a>
+        </p>
+        <p class="contact-line">
+          <a href="mailto:principal@vidyaacademy.ac.in" class="footer-contact-link">
+            <i class="fa-solid fa-envelope"></i> principal@vidyaacademy.ac.in
+          </a>
+        </p>
+      </div>
+
+      <!-- Center Logo Column -->
+      <div class="footer-col footer-branding">
+        <a href="#home">
+          <img src="vyvidh_26_logo.png" alt="Vyvidh Logo" class="footer-logo-large" onerror="this.src='Vyvidh `26_logo.PNG'">
+        </a>
+        <p class="copyright-text">&copy; Copyright Vyvidh26. All rights reserved.</p>
+      </div>
+
+      <!-- Socials Column (EXACT INSTAGRAM, LINKEDIN, FACEBOOK URLS) -->
+      <div class="footer-col footer-socials">
+        <h3 class="footer-heading">Socials</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/vidmediavast/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/school/vidyatcr/posts/?feedView=all" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/vidyatcr/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SMALL CIRCULAR FLOATING AUTO SCROLL BUTTON -->
+  <button id="auto-scroll-btn" class="auto-scroll-btn" onclick="toggleAutoScroll()" title="Toggle Auto Scroll" aria-label="Auto Scroll">
+    <i class="fa-solid fa-play"></i>
+  </button>
+
+  <!-- RECTANGULAR MODAL FOR MAIN EVENTS -->
+  <div class="modal-backdrop" id="event-modal" onclick="closeMainEventModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeMainEventModal()">&times;</button>
+      
+      <!-- Top: Name of Event -->
+      <div class="modal-header">
+        <h2 id="modal-event-title" class="main-heading modal-title">EVENT NAME</h2>
+      </div>
+
+      <!-- Content: Left Logo, Right Detailed Meta Info + Register Button -->
+      <div class="modal-body">
+        <div class="modal-left">
+          <div class="modal-logo-wrapper">
+            <img id="modal-event-logo" src="" alt="Event Logo" class="modal-logo-img">
+          </div>
+        </div>
+        <div class="modal-right">
+          <p id="modal-event-desc" class="modal-description">Event description goes here...</p>
+          
+          <div class="modal-meta-list">
+            <div class="meta-row"><i class="fa-solid fa-trophy"></i> <strong>Prize Pool:</strong> <span id="modal-event-prize" class="meta-val">₹75,000+</span></div>
+            <div class="meta-row"><i class="fa-solid fa-calendar-days"></i> <strong>Date:</strong> <span id="modal-event-date" class="meta-val">March 26 & 27, 2026</span></div>
+            <div class="meta-row"><i class="fa-solid fa-layer-group"></i> <strong>Event Type:</strong> <span id="modal-event-type" class="meta-val">National Project Expo</span></div>
+            <div class="meta-row"><i class="fa-solid fa-user-tie"></i> <strong>Staff Coordinator:</strong> <span id="modal-event-staff" class="meta-val">Dr. Sudha Balagopalan</span></div>
+            <div class="meta-row"><i class="fa-solid fa-graduation-cap"></i> <strong>Student Coordinator:</strong> <span id="modal-event-student" class="meta-val nowrap-val">Gokul R. (+91 98765 43210)</span></div>
+          </div>
+
+          <button class="btn btn-primary modal-register-btn" onclick="handleRegister()">REGISTER NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX FOR GALLERY -->
+  <div class="lightbox-backdrop" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img id="lightbox-img" src="" alt="Gallery Preview" class="lightbox-image">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
