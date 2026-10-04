@@ -930,17 +930,15 @@ body {
 .modal-backdrop, .lightbox-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(15, 2, 4, 0.94);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
   z-index: 2000;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal-backdrop.active, .lightbox-backdrop.active {
@@ -954,10 +952,13 @@ body {
   border-radius: 16px;
   width: 100%;
   max-width: 820px;
-  padding: 2.5rem;
+  padding: 2.2rem 1.6rem;
   position: relative;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(244, 208, 111, 0.2);
-  transform: scale(0.9);
+  max-height: 88vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(244, 208, 111, 0.25);
+  transform: scale(0.95);
   transition: transform 0.3s ease;
 }
 
@@ -967,19 +968,27 @@ body {
 
 .modal-close, .lightbox-close {
   position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  background: none;
-  border: none;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(244, 208, 111, 0.18);
+  border: 1.5px solid var(--gold-primary);
   color: var(--gold-primary);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
-  transition: color 0.2s ease;
+  z-index: 100;
+  transition: all 0.2s ease;
 }
 
 .modal-close:hover, .lightbox-close:hover {
-  color: var(--gold-light);
+  background: var(--gold-primary);
+  color: #28080B;
 }
 
 .modal-header {
@@ -1146,12 +1155,12 @@ body {
   .hero-vyvidh-logo {
     width: 180px !important;
     max-width: 60vw !important;
-    margin-top: 0 !important; /* Fixed vyvidh26logo top position */
+    margin-top: 0 !important;
   }
   .golden-multi-gradient-logo {
     width: 98vw !important;
     height: 270px !important;
-    margin-top: -4cm !important; /* Moves logo.png 4cm up on mobile */
+    margin-top: 1.8cm !important; /* Moves logo.png 2cm down from vyvidh26logo on mobile */
   }
   .mobile-toggle {
     display: block;
@@ -1224,12 +1233,12 @@ body {
   .hero-vyvidh-logo {
     width: 155px !important;
     max-width: 55vw !important;
-    margin-top: 0 !important; /* Fixed vyvidh26logo top position */
+    margin-top: 0 !important;
   }
   .golden-multi-gradient-logo {
     width: 98vw !important;
     height: 210px !important;
-    margin-top: -4cm !important; /* Moves logo.png 4cm up on mobile */
+    margin-top: 1.8cm !important; /* Moves logo.png 2cm down from vyvidh26logo on mobile */
   }
   .main-events-grid {
     grid-template-columns: 1fr;

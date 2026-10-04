@@ -191,7 +191,8 @@ function toggleAutoScroll() {
 }
 
 function startAutoScroll() {
-  function step() {
+  let lastTime = performance.now();
+  function step(currentTime) {
     if (!isAutoScrolling) return;
 
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -200,7 +201,11 @@ function startAutoScroll() {
       return;
     }
 
-    window.scrollBy(0, 2.2);
+    const deltaTime = currentTime - lastTime;
+    lastTime = currentTime;
+
+    const scrollStep = Math.min(3.5, (deltaTime / 16.6) * 2.2);
+    window.scrollBy(0, scrollStep);
     autoScrollRafId = requestAnimationFrame(step);
   }
   autoScrollRafId = requestAnimationFrame(step);
@@ -224,8 +229,10 @@ window.addEventListener('wheel', () => {
   if (isAutoScrolling) stopAutoScroll();
 }, { passive: true });
 
-window.addEventListener('touchstart', () => {
-  if (isAutoScrolling) stopAutoScroll();
+window.addEventListener('touchstart', (e) => {
+  if (isAutoScrolling && !e.target.closest('#auto-scroll-btn')) {
+    stopAutoScroll();
+  }
 }, { passive: true });
 
 /* ==========================================
@@ -265,19 +272,32 @@ function openMainEventModal(index) {
   const event = mainEventsData[index];
   if (!event) return;
 
-  document.getElementById('modal-event-title').textContent = event.title;
-  document.getElementById('modal-event-logo').src = event.logo;
-  document.getElementById('modal-event-logo').alt = event.title + " Logo";
-  document.getElementById('modal-event-desc').textContent = event.description;
-  document.getElementById('modal-event-prize').textContent = event.prize;
-  document.getElementById('modal-event-date').textContent = event.date;
-  document.getElementById('modal-event-type').textContent = event.type;
-  document.getElementById('modal-event-staff').textContent = event.staff;
-  document.getElementById('modal-event-student').textContent = event.student;
+  const titleEl = document.getElementById('modal-event-title');
+  const logoEl = document.getElementById('modal-event-logo');
+  const descEl = document.getElementById('modal-event-desc');
+  const prizeEl = document.getElementById('modal-event-prize');
+  const dateEl = document.getElementById('modal-event-date');
+  const typeEl = document.getElementById('modal-event-type');
+  const staffEl = document.getElementById('modal-event-staff');
+  const studentEl = document.getElementById('modal-event-student');
+
+  if (titleEl) titleEl.textContent = event.title;
+  if (logoEl) {
+    logoEl.src = event.logo;
+    logoEl.alt = event.title + " Logo";
+  }
+  if (descEl) descEl.textContent = event.description;
+  if (prizeEl) prizeEl.textContent = event.prize;
+  if (dateEl) dateEl.textContent = event.date;
+  if (typeEl) typeEl.textContent = event.type;
+  if (staffEl) staffEl.textContent = event.staff;
+  if (studentEl) studentEl.textContent = event.student;
 
   const modal = document.getElementById('event-modal');
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closeMainEventModal(e) {
